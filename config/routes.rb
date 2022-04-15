@@ -6,4 +6,5 @@ Rails.application.routes.draw do
 
   # cuando se haga una peticion de tipo GET a /products se va a responder con el controlador products con el metodo index
   get '/users',to: 'users#index'
+  get'/users/:id', to: 'users#show', as: :user
 end
