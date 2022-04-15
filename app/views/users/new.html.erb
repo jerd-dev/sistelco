@@ -2,6 +2,12 @@
 
 <%= form_with model: @user do |form| %>
 
+    <% @user.errors.full_messages.each do |error| %>
+        <div>
+        <%= error %>
+        </div>
+    <% end %>
+
     <div>
         <%= form.label :nombre %>
         <%= form.text_field :nombre %>

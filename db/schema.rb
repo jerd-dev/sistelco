@@ -10,18 +10,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_15_023449) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_15_052322) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "users", force: :cascade do |t|
-    t.string "nombre"
-    t.integer "dni"
-    t.string "type_person"
-    t.date "fecha_emision"
-    t.date "fecha_vencimiento"
-    t.string "email"
-    t.string "telefono_p"
+    t.string "nombre", null: false
+    t.integer "dni", null: false
+    t.string "type_person", null: false
+    t.date "fecha_emision", null: false
+    t.date "fecha_vencimiento", null: false
+    t.string "email", null: false
+    t.string "telefono_p", null: false
     t.string "telefono_s"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

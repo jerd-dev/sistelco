@@ -40,4 +40,22 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
         assert_redirected_to users_path 
     end
+
+    test 'not allow to create a new user with empty fields' do
+
+        post users_path, params: {
+            user: {
+                nombre: '',
+                dni: '1111111',
+                type_person: 'JURIDICA',
+                fecha_emision: '02-10-2022',
+                fecha_vencimiento: '02-10-2027',
+                email: 'pedro@gmail.com',
+                telefono_p: '04241234545',
+                telefono_5: '04261234545',
+            }
+        } 
+
+        assert_response :unprocessable_entity
+    end
 end
