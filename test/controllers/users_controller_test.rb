@@ -39,6 +39,7 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         } 
 
         assert_redirected_to users_path 
+        assert_equal flash[:notice], 'El usuario se ha creado correctamente'
     end
 
     test 'not allow to create a new user with empty fields' do
@@ -58,4 +59,6 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
         assert_response :unprocessable_entity
     end
+
+
 end
