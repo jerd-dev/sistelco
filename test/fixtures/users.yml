@@ -1,21 +1,31 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  nombre: MyString
-  dni: 1
-  type_person: MyString
+jonathan:
+  nombre: JONATHAN RUIZ
+  dni: 21151026
+  type_person: 'NATURAL'
   fecha_emision: 2022-04-14
-  fecha_vencimiento: 2022-04-14
-  email: MyString
-  telefono_p: MyString
-  telefono_s: MyString
+  fecha_vencimiento: 2027-04-14
+  email: 'JERD13@TEST.COM'
+  telefono_p: '04241337140'
+  telefono_s: '04169395894'
 
-two:
-  nombre: MyString
-  dni: 1
-  type_person: MyString
-  fecha_emision: 2022-04-14
-  fecha_vencimiento: 2022-04-14
-  email: MyString
-  telefono_p: MyString
-  telefono_s: MyString
+johan:
+  nombre: JOHAN RUIZ
+  dni: 13395346
+  type_person: 'JURIDICO'
+  fecha_emision: 2022-12-31
+  fecha_vencimiento: 2027-12-31
+  email: 'JOHAN@TEST.COM'
+  telefono_p: '02124823105'
+  telefono_s: '02124512838'
+
+digmar:
+  nombre: 'DIGMAR MARQUEZ'
+  dni: 22024158
+  type_person: 'NATURAL'
+  fecha_emision: 2022-02-02
+  fecha_vencimiento: 2027-02-02
+  email: 'DIGMAR@TEST.COM'
+  telefono_p: '04242618967'
+  telefono_s: '04262179077'
