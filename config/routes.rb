@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   # cuando se haga una peticion de tipo GET a /products se va a responder con el controlador products con el metodo index
+  delete '/users/:id', to: 'users#destroy'
   patch '/users/:id', to: 'users#update'
   post '/users',to: 'users#create'
   get '/users/new',to: 'users#new', as: :new_user
