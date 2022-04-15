@@ -5,3 +5,9 @@
 <span class='telefono_p'><%= @user.telefono_p %></span>
 
 <%= link_to 'Editar Usuario', edit_user_path(@user) %>
+
+<%= link_to 'Eliminar Usuario', user_path(@user), data: {
+    turbo_method: :delete,
+    turbo_confirm: 'Estas seguro?'
+} %>
+
