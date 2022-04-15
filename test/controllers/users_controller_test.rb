@@ -16,4 +16,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         assert_select '.telefono_p', '04241337140'
 
     end
+
+    test 'render a new user form' do
+        get new_user_path
+        assert_response :success
+        assert_select 'form'
+    end
+
 end
