@@ -89,5 +89,15 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         assert_response :unprocessable_entity
     end
 
+    test 'cand delete products' do
+        assert_difference('User.count', -1) do
+            delete user_path(users(:johan))
+        end
+
+        assert_redirected_to users_path
+        assert_equal flash[:notice], 'El usuario se ha eliminado correctamente'
+
+    end
+
 
 end
