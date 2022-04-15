@@ -38,6 +38,12 @@ class UsersController < ApplicationController
         end
     end
 
+    def destroy
+        @user = User.find(params[:id])
+        @user.destroy
+        redirect_to users_path, notice: 'El usuario se ha eliminado correctamente', status: :see_other
+    end
+
 
     private
 
