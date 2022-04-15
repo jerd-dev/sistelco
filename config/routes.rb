@@ -3,4 +3,7 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+
+  # cuando se haga una peticion de tipo GET a /products se va a responder con el controlador products con el metodo index
+  get '/users',to: 'users#index'
 end
