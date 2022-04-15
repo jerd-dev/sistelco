@@ -66,5 +66,28 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         assert_select 'form'
     end
 
+    test 'allow to update a user' do
+
+        patch user_path(users(:jonathan)), params: {
+            user: {
+                nombre: 'PEDRO EDICION',
+            }
+        } 
+
+        assert_redirected_to users_path 
+        assert_equal flash[:notice], 'El usuario se ha actualizado correctamente'
+    end
+
+    test 'does not allow to update a user with invalid field' do
+
+        patch user_path(users(:jonathan)), params: {
+            user: {
+                nombre: nil,
+            }
+        } 
+
+        assert_response :unprocessable_entity
+    end
+
 
 end
