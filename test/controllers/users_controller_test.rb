@@ -60,5 +60,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         assert_response :unprocessable_entity
     end
 
+    test 'render an edit user form' do
+        get edit_user_path(users(:jonathan))
+        assert_response :success
+        assert_select 'form'
+    end
+
 
 end
