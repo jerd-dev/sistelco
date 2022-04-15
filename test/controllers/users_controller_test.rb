@@ -23,4 +23,21 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
         assert_select 'form'
     end
 
+    test 'allow to create a new user' do
+
+        post users_path, params: {
+            user: {
+                nombre: 'PEDRO GONZALEZ',
+                dni: '1111111',
+                type_person: 'JURIDICA',
+                fecha_emision: '02-10-2022',
+                fecha_vencimiento: '02-10-2027',
+                email: 'pedro@gmail.com',
+                telefono_p: '04241234545',
+                telefono_5: '04261234545',
+            }
+        } 
+
+        assert_redirected_to users_path 
+    end
 end
